@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/howler/.config'
+let g:netrw_dirhist_2='/home/howler/.i3'
+let g:netrw_dirhist_3='/home/howler/.gnupg'
+let g:netrw_dirhist_4='/home/howler/Development/node-course/todo-api'
