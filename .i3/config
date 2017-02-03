@@ -185,3 +185,4 @@ new_window pixel 1
 
 exec_always --no-startup-id compton
 exec_always --no-startup-id xbindkeys
+exec --no-startup-id synergyc --enable-crypto andromeda
