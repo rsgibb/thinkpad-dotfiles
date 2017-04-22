@@ -56,7 +56,7 @@ cpu_usage {
 
 cpu_temperature 0 {
   format = " %degrees °C"
-  max_threshold = "65"
+  max_threshold = "85"
 }
 
 disk "/" {

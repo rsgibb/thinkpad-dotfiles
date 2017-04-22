@@ -78,7 +78,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -148,6 +148,9 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font pango: Droid Sans Mono 10
+        position bottom
+		modifier $mod2
+		#mode hide
 }
 
 font pango: Droid Sans Mono 10
@@ -156,13 +159,19 @@ bindsym $mod+i exec --no-startup-id google-chrome-stable
 
 #for_window [class="Chromium"] fullscreen
 
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2
 
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%- unmute
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3%+ unmute
-bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks|awk '/\* index:/{ print $3 }') +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks|awk '/\* index:/{ print $3 }') -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks|awk '/\* index:/{ print $3 }') toggle # mute sound
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute  $(pacmd list-sources|awk '/\* index:/{ print $3 }') toggle
+
+#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%- unmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3%+ unmute
+#bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
 bindsym XF86ScreenSaver exec i3lock --color 000000
 
@@ -170,7 +179,7 @@ for_window [class="Google-chrome"] border pixel 0
 for_window [class="Spotify"] border pixel 0
 for_window [class="Code"] border pixel 0
 
-for_window [class="Asoundconf-gtk"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # Gaps
 #for_window [class="^.*"] border pixel 0
@@ -178,11 +187,15 @@ for_window [class="Asoundconf-gtk"] floating enable
 #gaps outer 5
 #smart_gaps on
 
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+# bar toggle, hide or show 
+bindsym $mod+m bar mode toggle
+
+bindsym $mod+space exec --no-startup-id "rofi -show drun"
 bindsym $mod+o exec "rofi -show ssh"
 
 new_window pixel 1
 
 exec_always --no-startup-id compton
-exec_always --no-startup-id xbindkeys
-exec --no-startup-id synergyc --enable-crypto andromeda
+#exec_always --no-startup-id xbindkeys
+#exec --no-startup-id synergyc --enable-crypto andromeda
+exec --no-startup-id /bin/sh ~/.fehbg
