@@ -3,4 +3,4 @@ set autoindent
 set mouse=a
 set number
 syntax on
-source ~/.vim/jellybeans.vim
+"source ~/.vim/jellybeans.vim

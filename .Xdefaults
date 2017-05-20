@@ -7,7 +7,7 @@
 ! URxvt*skipScroll:                     boolean
 ! URxvt*pastableTabs:                   boolean
 ! URxvt*scrollstyle:                    mode
-URxvt*scrollBar:                        false 
+! - URxvt*scrollBar:                        false 
 ! URxvt*scrollBar_right:                boolean
 ! URxvt*scrollBar_floating:             boolean
 ! URxvt*scrollBar_align:                mode
@@ -16,9 +16,9 @@ URxvt*scrollBar:                        false
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-URxvt*transparent:                    true
-! URxvt*tintColor:                      color
-URxvt*shading:	                30
+URxvt*transparent:                    	true
+#URxvt*tintColor:                        #141021
+URxvt*shading:	                		20
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -33,8 +33,8 @@ URxvt*shading:	                30
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean!
 ! URxvt*pointerBlank:                   boolean
-URxvt*background:                     black
-URxvt*foreground:                     lightgrey
+! - URxvt*background:                     black
+! - URxvt*foreground:                     lightgrey
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
 ! URxvt*color2:                         color
@@ -66,7 +66,8 @@ URxvt*foreground:                     lightgrey
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:                             xft:Droid Sans Mono:size=10
+! - URxvt*font:                             xft:Droid Sans Mono:size=8
+URxvt*font: 							xft:iosevka:size=10
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -131,8 +132,77 @@ URxvt*font:                             xft:Droid Sans Mono:size=10
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
+!rofi.color-enabled: true
+!rofi.color-window: #393939, #393939, #268bd2
+!rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+!rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+!rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+# 1984
 rofi.color-enabled: true
-rofi.color-window: #393939, #393939, #268bd2
-rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
-rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
-rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+rofi.color-window: #141021, #c16772, #9568a1
+rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
+rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
+rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
+rofi.width: 800
+rofi.padding: 50
+rofi.font: iosevka 16
+rofi.bw: 3
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+Xft.dpi:                        96
+Xft.antialias:                  1
+Xft.autohint:                   1
+Xft.hinting:                    1
+Xft.hintstyle:                  hintslight
+Xft.lcdfilter:                  lcdlight
+Xft.rgba:                       rgb
+
+URxvt*termName:                 rxvt-256color
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+!URxvt.internalBorder:           25
+!URxvt.perl-ext:	 		default,matcher
+!URxvt.url-launcher:             chromium
+!URxvt.matcher.button: 		1
+
+*.foreground:   #ffeefc
+*.background:   #141021
+*.cursorColor:  #c16772
+
+! black
+*.color0:       #4f4858
+*.color8:       #545d67
+
+! red
+*.color1:       #c05c47
+*.color9:       #c16772
+
+! green
+*.color2:       #428e8e
+*.color10:      #afda6e
+
+! yellow
+*.color3:       #e4b226
+*.color11:      #ebcf1a
+
+! blue
+*.color4:       #4457a3
+*.color12:      #4880a5
+
+! magenta
+*.color5:       #903a62
+*.color13:      #9568a1
+
+! cyan
+*.color6:       #7aa1dc
+*.color14:      #abbcda
+
+! white
+*.color7:       #c4b7c5
+*.color15:      #ffeefc
