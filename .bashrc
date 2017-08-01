@@ -8,3 +8,4 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+export PATH=$PATH:~/.bin
