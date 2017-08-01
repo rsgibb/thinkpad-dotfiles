@@ -8,13 +8,13 @@ general {
 }
 
 order += "ethernet tun0"
-order += "ethernet enp0s25"
-order += "wireless _first_"
+order += "ethernet enp5s0"
+#order += "wireless _first_"
 order += "load"
 order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "disk /"
-order += "battery 0"
+#order += "battery 0"
 order += "volume master"
 order += "time"
 
@@ -25,9 +25,9 @@ battery 0 {
   #path = "/sys/class/power_supply/BAT0/uevent"
 }
 
-ethernet enp0s25 {
+ethernet enp5s0 {
 # if you use %speed, i3status requires root privileges
-  format_up = " enp0s25  %ip"
+  format_up = " enp5s0  %ip"
   format_down = ""
 }
 
@@ -57,8 +57,8 @@ cpu_usage {
 cpu_temperature 0 {
   format = " %degrees °C"
   max_threshold = "85"
+  path = "/sys/devices/platform/it87.552/hwmon/hwmon2/temp2_input"
 }
-
 disk "/" {
   format = " %avail"
 }
