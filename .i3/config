@@ -171,6 +171,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks|awk '/\* index:/{ print $3 }') -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks|awk '/\* index:/{ print $3 }') toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute  $(pacmd list-sources|awk '/\* index:/{ print $3 }') toggle
+bindsym $mod+F1 exec --no-startup-id ~/.bin/pa-toggle-sink.sh
+
 
 #bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%- unmute
@@ -178,6 +180,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute  $(pacmd lis
 #bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
 
 bindsym XF86ScreenSaver exec i3lock --color 000000
+bindsym $mod+l exec i3lock --color 000000
 
 for_window [class="Google-chrome"] border pixel 0
 for_window [class="Spotify"] border pixel 0
@@ -186,10 +189,10 @@ for_window [class="Code"] border pixel 0
 for_window [class="Pavucontrol"] floating enable
 
 # Gaps
-#for_window [class="^.*"] border pixel 0
-#gaps inner 5
-#gaps outer 5
-#smart_gaps on
+for_window [class="^.*"] border pixel 0
+gaps inner 8
+gaps outer 0
+smart_gaps on
 
 # bar toggle, hide or show 
 bindsym $mod+m bar mode toggle
@@ -200,7 +203,7 @@ bindsym $mod+n exec --no-startup-id "networkmanager_dmenu"
 
 new_window pixel 1
 
-exec_always --no-startup-id compton
+exec --no-startup-id compton -cCzG -t-3 -l-5 -r4 --config /dev/null --backend xrender --unredir-if-possible
 #exec_always --no-startup-id xbindkeys
 #exec --no-startup-id synergyc --enable-crypto andromeda
 exec --no-startup-id /bin/sh ~/.fehbg
