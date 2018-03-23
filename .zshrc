@@ -18,3 +18,7 @@ zstyle :compinstall filename '/home/howler/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+bindkey "${terminfo[kdch1]}" delete-char
+
