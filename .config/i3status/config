@@ -27,7 +27,8 @@ battery 0 {
 
 ethernet enp0s25 {
 # if you use %speed, i3status requires root privileges
-  format_up = " enp0s25  %ip"
+  format_up = " %ip"
+#  format_up = " enp0s25  %ip"
   format_down = ""
 }
 
