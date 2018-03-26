@@ -24,7 +24,7 @@ font pango:DejaVu Sans Mono 8, Font Awesome 5 Free
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id st # i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -217,7 +217,7 @@ exec_always --no-startup-id compton
 exec --no-startup-id /bin/sh ~/.fehbg
 
 # dropdown terminal 
-set $term --no-startup-id urxvt
+set $term --no-startup-id st
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 625 400
 for_window [instance="dropdown"] move scratchpad
