@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' '/home/howler/Pictures/wallhaven-490733.jpg' 
+feh --bg-scale '/home/howler/Pictures/dracula.jpg' 

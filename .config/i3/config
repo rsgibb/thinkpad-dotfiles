@@ -190,6 +190,9 @@ for_window [class="Spotify"] border pixel 0
 for_window [class="Code"] border pixel 0
 
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="Evince"] floating enable
+for_window [class="^Steam$" title="^Friends$"] resize width 220
 
 # Gaps
 gaps inner 8
@@ -211,6 +214,8 @@ exec --no-startup-id compton -cCzG -t-3 -l-5 -r4 --config /dev/null --backend xr
 #exec_always --no-startup-id xbindkeys
 #exec --no-startup-id synergyc --enable-crypto andromeda
 exec --no-startup-id /bin/sh ~/.fehbg
+
+assign [class="^Steam$"] 3
 
 # dropdown terminal 
 set $term --no-startup-id urxvt
