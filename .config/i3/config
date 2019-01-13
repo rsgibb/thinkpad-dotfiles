@@ -21,7 +21,7 @@ set $term --no-startup-id urxvt
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-font pango:DejaVu Sans Mono 8, Font Awesome 5 Free
+font pango:DejaVu Sans Mono, 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -138,7 +138,7 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
-
+ 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
  bar {
         status_command i3status
-        font pango: DejaVu Mono Sans 8
+#        font pango: DejaVu Mono Sans 8
         position bottom
 		modifier $mod2
 #		colors {
@@ -160,7 +160,7 @@ bindsym $mod+r mode "resize"
 		#mode hide
 }
 
-font pango: Droid Sans Mono 10
+#font pango: Droid Sans Mono 10
 
 bindsym $mod+i exec --no-startup-id google-chrome-stable
 
@@ -227,4 +227,5 @@ exec --no-startup-id $term -name dropdown
 
 bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id light-locker

@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' '/home/howler/Pictures/thinkpad.png' 
+feh --bg-scale '/home/howler/Pictures/exploded_x220.png' 

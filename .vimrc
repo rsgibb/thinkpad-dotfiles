@@ -1,16 +1,20 @@
-set tabstop=4
-set autoindent
+
 set mouse=a
 set number
 set relativenumber
-set shiftwidth=4
 set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
 set ruler
 set noshowmode
-
+filetype plugin indent on
 " search
 set smartcase
 set ignorecase
+
+set splitbelow splitright
 
 " toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -26,3 +30,4 @@ syntax on
 let g:jellybeans_background_color_256='NONE'
 "hi Normal ctermbg=NONE
 source ~/.vim/jellybeans.vim
+
