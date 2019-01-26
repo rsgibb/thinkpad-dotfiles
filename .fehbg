@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '/home/howler/Pictures/dracula.jpg' 
+feh --bg-center '/home/howler/Pictures/27339.jpg' 
