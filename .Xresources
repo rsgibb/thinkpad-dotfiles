@@ -16,9 +16,9 @@
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-URxvt*transparent:                    	true
-#URxvt*tintColor:                        #141021
-URxvt*shading:	                		20
+! URxvt*transparent:                    	true
+!URxvt*tintColor:                        #141021
+! URxvt*shading:	                		20
 ! URxvt*blurRadius:                     HxV
 ! URxvt*fading:                         number
 ! URxvt*fadeColor:                      color
@@ -33,7 +33,7 @@ URxvt*shading:	                		20
 ! URxvt*cursorUnderline:                boolean
 ! URxvt*cursorBlink:                    boolean!
 ! URxvt*pointerBlank:                   boolean
-! URxvt*background:                     black
+! URxvt*background:                     rgba:1111/1111/1111/dddd 
 ! URxvt*foreground:                     lightgrey
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
@@ -160,7 +160,9 @@ Xft.lcdfilter:                  lcdlight
 Xft.rgba:                       rgb
 
 URxvt*termName:                 rxvt-256color
-URxvt.depth:                    32
+URxvt*depth:                    32
+URxvt*background:               [80]#000011
+
 !URxvt*lineSpace:                1
 URxvt.letterSpace:              -1
 URxvt.iso14755:                 false
