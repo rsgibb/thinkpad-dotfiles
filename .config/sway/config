@@ -150,7 +150,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
  bar {
         status_command i3status
-#        font pango: DejaVu Mono Sans 8
+        font pango: Fira Code Nerd Font 9
         position bottom
 		modifier $mod2
 #		colors {
